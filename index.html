@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>PDF to Word Converter</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #667eea, #764ba2);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+
+    .container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      width: 350px;
+    }
+
+    h2 {
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    input[type="file"] {
+      margin-bottom: 20px;
+      color: white;
+    }
+
+    input[type="file"]::file-selector-button {
+      background-color: #ffffff;
+      color: #333;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    button {
+      background-color: #00c9a7;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #009f87;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>PDF to Word Converter</h2>
+    <form action="/convert" method="post" enctype="multipart/form-data">
+      <input type="file" name="pdf_file" accept="application/pdf" required><br>
+      <button type="submit">Convert</button>
+    </form>
+  </div>
+</body>
+</html>
